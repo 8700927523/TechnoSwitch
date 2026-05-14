@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techno Switch - Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(rgba(10, 15, 25, 0.92), rgba(15, 10, 30, 0.95)),
+                  url('https://source.unsplash.com/random/1920x1080/?dj,outdoor,restaurant,greenery,night') center/cover no-repeat fixed;
+      color: #e0f0ff;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 620px;
+      margin: 40px auto;
+      background: rgba(15, 20, 35, 0.92);
+      border: 1px solid #445577;
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin: 0 0 8px 0;
+      color: #a0d8ff;
+      letter-spacing: 3px;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 1.25rem;
+      margin-bottom: 25px;
+      color: #88aabb;
+    }
+    .warning {
+      background: rgba(80, 20, 30, 0.8);
+      border-left: 5px solid #ff5566;
+      color: #ffbbcc;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+    label {
+      display: block;
+      margin: 20px 0 8px;
+      font-size: 1.05rem;
+      color: #bbddff;
+    }
+    input[type="text"], input[type="url"] {
+      width: 100%;
+      padding: 14px;
+      background: rgba(30, 35, 55, 0.8);
+      border: 1px solid #556677;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+    }
+    .radio-group {
+      display: flex;
+      gap: 25px;
+      margin: 12px 0;
+      flex-wrap: wrap;
+    }
+    button {
+      width: 100%;
+      padding: 16px;
+      margin-top: 35px;
+      background: linear-gradient(90deg, #336699, #22aabb);
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #22aabb, #55ccdd);
+    }
+    .note {
+      font-size: 0.95rem;
+      color: #99aabb;
+      text-align: center;
+      margin-top: 25px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TECHNO SWITCH</h1>
+    <p class="subtitle">First Noida Techno Scene</p>
+    
+    <div class="warning">
+      <strong>STRICT NO DRUGS POLICY</strong><br>
+      Any possession or consumption of drugs/illegal substances is strictly prohibited.<br>
+      Violation will result in immediate entry denial and legal action.
+    </div>
+
+    <form id="technoForm" action="https://formsubmit.co/technoswitch360@gmail.com" method="POST">
+      <label for="name">Full Name <span style="color:#ff8899;">(One Entry Per Person Only)</span></label>
+      <input type="text" id="name" name="Full Name" required placeholder="Enter your full name">
+
+      <label for="genre">Your Favourite Techno Genre</label>
+      <input type="text" id="genre" name="Favourite Techno Genre" required placeholder="e.g. Melodic Techno, Acid, Minimal...">
+
+      <label>Drinks Preference</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Drinks Preference" value="Beer" required> Beer</label>
+        <label><input type="radio" name="Drinks Preference" value="Whiskey"> Whiskey</label>
+        <label><input type="radio" name="Drinks Preference" value="Vodka"> Vodka</label>
+      </div>
+
+      <label>Would you like to enjoy our tastiest snacks?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Snacks" value="Yes" required> Yes</label>
+        <label><input type="radio" name="Snacks" value="No"> No</label>
+      </div>
+
+      <label for="instagram">Your Instagram Profile Link</label>
+      <input type="url" id="instagram" name="Instagram Link" required placeholder="https://instagram.com/yourusername">
+
+      <!-- Hidden fields -->
+      <input type="hidden" name="_subject" value="New Techno Switch Registration!">
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html"> <!-- Optional: Thank you page -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit">Submit Registration</button>
+    </form>
+
+    <p class="note">
+      Only one entry allowed per name.<br>
+      You must have received an official invitation to register.
+    </p>
+  </div>
+
+  <script>
+    document.getElementById('technoForm').addEventListener('submit', function() {
+      // Optional: Show message before redirect
+      setTimeout(() => {
+        alert("✅ Registration Submitted Successfully!\n\nThank you for joining Techno Switch 🔥");
+      }, 500);
+    });
+  </script>
+</body>
+</html>
